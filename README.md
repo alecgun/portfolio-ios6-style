@@ -69,7 +69,7 @@ DB_PASSWORD=
 
 ADMIN_NAME="Nama Admin"
 ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=ganti-dengan-password-acak-minimal-16-karakter
+ADMIN_PASSWORD=ganti-dengan-password-acak-minimal-8-karakter
 ```
 > *Catatan: Pastikan database `portfolio_db` sudah dibuat di server MySQL Anda.*
 >
@@ -114,7 +114,7 @@ SESSION_SECURE_COOKIE=true
 LOG_CHANNEL=daily
 ```
 
-Isi juga koneksi database dan `ADMIN_NAME`, `ADMIN_EMAIL`, serta `ADMIN_PASSWORD` yang kuat (minimal 16 karakter). Gunakan HTTPS dari hosting/reverse proxy dan jangan pernah menjalankan `key:generate` lagi setelah aplikasi production mulai menyimpan data.
+Isi juga koneksi database dan `ADMIN_NAME`, `ADMIN_EMAIL`, serta `ADMIN_PASSWORD` yang kuat (minimal 8 karakter). Gunakan HTTPS dari hosting/reverse proxy dan jangan pernah menjalankan `key:generate` lagi setelah aplikasi production mulai menyimpan data.
 
 Build dependensi dan aset saat proses deployment:
 
