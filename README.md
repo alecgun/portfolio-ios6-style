@@ -1,64 +1,64 @@
-# Web Portofolio Personal (iOS 6 Classic Edition) + Admin Dashboard CMS
+# Personal Portfolio Website (iOS 6 Classic Edition) + Admin Dashboard CMS
 
-Website portofolio interaktif bergaya retro-skeuomorphic **iOS 6 Classic Edition** (linen dark background, glossy squircle icons, glossy navigation buttons, pinstripe cards, and yellow lined paper notes) dibangun dengan arsitektur **Laravel 13** dan basis data **MySQL**.
+An interactive retro-skeuomorphic portfolio website styled after **iOS 6 Classic Edition** (dark linen background, glossy squircle icons, glossy navigation buttons, pinstripe cards, and yellow lined paper notes), built with the **Laravel 13** framework and a **MySQL** database.
 
-Seluruh isi konten portofolio dapat dikelola langsung secara dinamis melalui **Web Dashboard Admin** yang terproteksi autentikasi (login).
+All portfolio content can be managed dynamically through an authentication-protected **Admin Web Dashboard**.
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-### 1. Halaman Publik Portofolio
-- **Hero & Profile Card**: Foto avatar squircle glossy, badge ketersediaan "OPEN TO WORK", nama, role, bio, dan tombol aksi.
-- **Slide-to-Unlock CV Resume**: Slider interaktif untuk mengunduh dokumen CV PDF asli yang diunggah oleh admin.
-- **Home Screen App Grid (Skills)**: Grid 6+ ikon aplikasi glossy iOS 6 dengan banner notifikasi interaktif yang menampilkan daftar tools dan keahlian saat disentuh/diklik.
+### 1. Public Portfolio Pages
+- **Hero & Profile Card**: Glossy squircle avatar, "OPEN TO WORK" availability badge, name, role, bio, and action buttons.
+- **Slide-to-Unlock CV Resume**: Interactive slider for downloading the original CV PDF uploaded by the admin.
+- **Home Screen App Grid (Skills)**: A grid of 6+ glossy iOS 6 app icons with interactive notification banners that display tools and skills when tapped or clicked.
 - **Portfolio Showcase (Grouped Table)**:
-  - Filter kategori (*Semua*, *App*, *Web*).
-  - Kartu proyek dengan thumbnail, badge kategori, dan daftar teknologi.
-  - Modal dialog *UIAlertView* kaca biru gelap untuk membaca deskripsi lengkap, rincian tech stack, serta tautan live demo & repository GitHub.
-- **Preferensi & Ketersediaan Kerja**: Switch toggle ON/OFF khas iOS 6 dan informasi domisili/lokasi basis.
-- **Notes App Section**: Catatan karier dan filosofi desain dengan tekstur kertas kuning bergaris (*yellow lined paper*) dan header kulit (*leather header*).
-- **Form Kontak Modal (AJAX)**: Pengunjung dapat mengirim pesan langsung tanpa refresh halaman, dilengkapi proteksi CSRF dan tersimpan ke database MySQL.
+  - Category filters (*All*, *App*, *Web*).
+  - Project cards with thumbnails, category badges, and technology lists.
+  - A dark blue glass *UIAlertView* modal for reading full descriptions, technology stack details, and live demo and GitHub repository links.
+- **Preferences & Work Availability**: iOS 6-style ON/OFF switches and location or base-of-operations information.
+- **Notes App Section**: Career notes and design philosophies with *yellow lined paper* texture and a *leather header*.
+- **Contact Modal Form (AJAX)**: Visitors can send messages without refreshing the page. Submissions are protected with CSRF and stored in MySQL.
 
-### 2. Autentikasi & Dashboard Admin
-- **Keamanan Login**:
-  - Halaman login di `/admin/login`.
-  - Rate limiter bawaan (maksimal 5 percobaan gagal per menit).
-  - Sesi terenkripsi dan proteksi middleware `auth` untuk seluruh route `/admin/*`.
-- **Ringkasan (Overview)**: Metrik total proyek, keahlian, pesan belum dibaca, status ketersediaan kerja, dan log pesan masuk terbaru.
-- **Kelola Profil & CV**: Form ubah nama, headline, role, bio, upload foto avatar (preview otomatis), upload dokumen CV PDF baru, serta nomor versi resume.
-- **Kelola Proyek (CRUD)**: Tambah, edit, dan hapus proyek portofolio lengkap dengan upload gambar cover/thumbnail, tags teknologi, dan tautan live demo.
-- **Kelola Keahlian (CRUD)**: Kelola daftar ikon aplikasi di Home Screen, pemilihan ikon FontAwesome, preset gradient warna iOS 6, dan urutan tampil.
-- **Kelola Pengalaman (CRUD)**: Tambah dan perbarui riwayat karier pada section Notes App.
-- **Kelola Catatan Filosofi**: Mengedit header, tanggal, judul utama, dan isi tulisan reflektif.
-- **Kotak Masuk Pesan (Inbox)**: Membaca pesan masuk dari pengunjung, menandai status telah dibaca, membalas via email (*mailto*), serta menghapus pesan.
-- **Akun & Keamanan**: Mengubah nama akun, mengganti alamat email login, serta memperbarui kata sandi admin dengan verifikasi kata sandi lama.
+### 2. Authentication & Admin Dashboard
+- **Login Security**:
+  - Login page at `/admin/login`.
+  - Built-in rate limiter (maximum of 5 failed attempts per minute).
+  - Encrypted sessions and `auth` middleware protection for every `/admin/*` route.
+- **Overview**: Metrics for total projects, skills, unread messages, work availability status, and the latest incoming message log.
+- **Profile & CV Management**: Forms to update the name, headline, role, and bio; upload an avatar with automatic preview; upload a new CV PDF; and update the resume version number.
+- **Project Management (CRUD)**: Create, edit, and delete portfolio projects, including cover or thumbnail images, technology tags, and live demo links.
+- **Skill Management (CRUD)**: Manage the Home Screen app list, Font Awesome icons, iOS 6 color gradient presets, and display order.
+- **Experience Management (CRUD)**: Add and update career history in the Notes App section.
+- **Philosophy Notes Management**: Edit the header, date, main title, and reflective text.
+- **Message Inbox**: Read visitor messages, mark messages as read, reply through *mailto*, and delete messages.
+- **Account & Security**: Change the account name or login email, and update the admin password after verifying the current password.
 
 ---
 
-## 🛠️ Persyaratan Sistem
-- **PHP** >= 8.3 (mendukung PHP 8.4 & 8.5)
+## 🛠️ System Requirements
+- **PHP** >= 8.3 (supports PHP 8.4 and 8.5)
 - **Composer** >= 2.x
-- **MySQL** >= 8.0 (atau MariaDB / SQLite untuk pengujian lokal)
-- **Node.js & NPM** (opsional, Tailwind CSS CDN & FontAwesome terintegrasi)
+- **MySQL** >= 8.0 (or MariaDB / SQLite for local testing)
+- **Node.js & npm** (optional; Tailwind CSS CDN and Font Awesome are integrated)
 
 ---
 
-## 📦 Panduan Instalasi & Menjalankan
+## 📦 Installation and Running
 
-### 1. Clone Proyek
+### 1. Clone the Project
 ```bash
 git clone https://github.com/alecgun/portfolio-ios6-style.git
 cd portfolio-ios6-style
 ```
 
-### 2. Salin File Konfigurasi Environment
+### 2. Copy the Environment Configuration File
 ```bash
 cp .env.example .env
 ```
 
-### 3. Konfigurasi Basis Data MySQL
-Buka file `.env` dan sesuaikan koneksi database MySQL serta kredensial admin awal:
+### 3. Configure the MySQL Database
+Open `.env` and update the MySQL connection and initial admin credentials:
 ```ini
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -67,56 +67,56 @@ DB_DATABASE=portfolio_db
 DB_USERNAME=root
 DB_PASSWORD=
 
-ADMIN_NAME="Nama Admin"
+ADMIN_NAME="Admin Name"
 ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=ganti-dengan-password-acak-minimal-8-karakter
+ADMIN_PASSWORD=replace-with-random-password-minimum-8-characters
 ```
-> *Catatan: Pastikan database `portfolio_db` sudah dibuat di server MySQL Anda.*
+> *Note: Make sure the `portfolio_db` database has already been created on your MySQL server.*
 >
-> Gunakan password acak yang unik. Jangan commit file `.env` atau memakai password contoh ini di production.
+> Use a unique random password. Do not commit `.env` or use the example password in production.
 
-### 4. Install Dependensi PHP (jika belum)
+### 4. Install PHP Dependencies (if needed)
 ```bash
 composer install
 ```
 
-### 5. Generate Application Key & Storage Link
+### 5. Generate the Application Key and Create the Storage Link
 ```bash
 php artisan key:generate
 php artisan storage:link
 ```
 
-### 6. Jalankan Migrasi & Seeder Data Awal
-Perintah ini akan membuat tabel dan mengimpor profil, keahlian, pengalaman, catatan awal, serta membuat akun admin dari nilai `ADMIN_*`. Proyek contoh tidak di-seed; tambahkan proyek Anda dari dashboard.
+### 6. Run Migrations and Seed Initial Data
+This creates the tables and imports the profile, skills, experience, and initial notes, and creates the admin account from the `ADMIN_*` values. Example projects are not seeded; add yours from the dashboard.
 ```bash
 php artisan migrate --seed
 ```
 
-### 7. Jalankan Server Lokal
+### 7. Start the Local Server
 ```bash
 php artisan serve
 ```
-Akses web portofolio di peramban Anda melalui:
-- **Halaman Portofolio Publik**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-- **Halaman Login Admin**: [http://127.0.0.1:8000/admin/login](http://127.0.0.1:8000/admin/login)
+Access the portfolio website in your browser:
+- **Public Portfolio Page**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- **Admin Login Page**: [http://127.0.0.1:8000/admin/login](http://127.0.0.1:8000/admin/login)
 
 ---
 
-## 🚀 Persiapan Production
+## 🚀 Production Setup
 
-Atur konfigurasi berikut melalui secret manager atau environment variables di hosting, bukan di repository:
+Configure the following values through a secret manager or hosting environment variables instead of the repository:
 
 ```ini
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://domain-anda
+APP_URL=https://your-domain.com
 SESSION_SECURE_COOKIE=true
 LOG_CHANNEL=daily
 ```
 
-Isi juga koneksi database dan `ADMIN_NAME`, `ADMIN_EMAIL`, serta `ADMIN_PASSWORD` yang kuat (minimal 8 karakter). Gunakan HTTPS dari hosting/reverse proxy dan jangan pernah menjalankan `key:generate` lagi setelah aplikasi production mulai menyimpan data.
+Also set the database connection and strong values for `ADMIN_NAME`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` (minimum 8 characters). Use HTTPS through a hosting provider or reverse proxy, and never run `key:generate` again after the production application begins storing data.
 
-Build dependensi dan aset saat proses deployment:
+Build dependencies and assets during deployment:
 
 ```bash
 composer install --no-dev --optimize-autoloader
@@ -127,13 +127,13 @@ php artisan storage:link
 php artisan optimize
 ```
 
-Pada instalasi pertama saja, jalankan `php artisan db:seed --force` untuk membuat akun admin dan konten awal tanpa proyek contoh. Jangan jalankan seeder pada setiap deployment. Backup database sebelum migrasi, dan jangan commit `.env`, database SQLite, log, atau file upload.
+Run `php artisan db:seed --force` only during the first installation to create the admin account and initial content without example projects. Do not run the seeder for every deployment. Back up the database before migrations, and do not commit `.env`, SQLite databases, logs, or uploaded files.
 
 ---
 
-## 🧪 Menjalankan Pengujian Otomatis (Testing)
-Seluruh modul dilengkapi unit/feature test:
+## 🧪 Running Automated Tests
+The unit and feature tests cover all modules:
 ```bash
 php artisan test
 ```
-Hasil uji mencakup verifikasi render publik, form kontak AJAX, proteksi route admin, flow autentikasi, serta operasi CRUD portofolio.
+The tests verify public rendering, the AJAX contact form, admin route protection, authentication flows, and portfolio CRUD operations.
